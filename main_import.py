@@ -39,7 +39,7 @@ def import_messages(bot_client, cleaned_messages):
     return None
 
 #called everytime a message is typed to the bot
-def import_blk(bot_client):
+def run_import(bot_client):
     #initialize import messages functionality when '/import' is typed to bot
     latest_timestamp = 0
     #grab 100 messages at a time and paginate:
@@ -71,7 +71,7 @@ def main():
         # Initialize SymBotClient with auth and configure objects
         bot_client = SymBotClient(auth, configure)
         print('successfully authenticated')
-        import_blk(bot_client)
+        run_import(bot_client)
         print('successfully imported')
 
 
