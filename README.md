@@ -27,5 +27,5 @@ The clean_message() function inside this script takes the returned paylaod from 
 ### Roles: 
 Bots or service accounts must have the Content Management and Content Export Service roles.  You can configure in the admin portal.  
 
-
+### Contact:
 For any additional questions, reach out to developer.relations@symphony.com
