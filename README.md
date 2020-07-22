@@ -10,8 +10,16 @@ This import script leverages the Import Message API endpoint: https://developers
 
 This specific script is designed to import messages from one chatroom in Symphony to another in Symphony.  When the bot starts, it grabs the first 100 messages, cleans them, and import them.  It repeats this process for the next batch of 100 messages, updating the latest timestamp on each iteration to avoid importing any duplicate messages.  This process repeats until all of the messages are obtained, cleaned, and imported.
 
-Note: The origin streamID, destination streamID, number of messages obtained in a batch, as well as the earliest message you wish to retrieve are all configurable by editing the script directly.  
+### Note: 
+The origin streamID, destination streamID, number of messages obtained in a batch, as well as the earliest message you wish to retrieve are all configurable by editing the script directly.  
 
-For private rooms, bots must be in the room in order to access messages or import messages.  
+### Note:
+For private rooms, bots must be in the room in order to access messages or import messages.
+
+### Note:
+The clean_message() function inside this script takes the returned paylaod from the Get Message endpoint: https://developers.symphony.com/restapi/reference#messages-v4 and cleans the data to fit the body parameters needed for the Import Message endpoint: https://developers.symphony.com/restapi/reference#import-message-v4
+
+### Roles: 
+Bots or service accounts must have the Content Management and Content Export Service roles.  You can configure in the admin portal.  
 
 
