@@ -25,7 +25,7 @@ For private rooms, bots must be in the room in order to access messages or impor
 The clean_message() function inside this script takes the returned paylaod from the Get Message endpoint: https://developers.symphony.com/restapi/reference#messages-v4 and cleans the data to fit the body parameters needed for the Import Message endpoint: https://developers.symphony.com/restapi/reference#import-message-v4
 
 ### Roles: 
-Bots or service accounts must have the Content Management and Content Export Service roles.  You can configure in the admin portal.  
+Bots or service accounts must have the Content Management and User Provisioning roles.  You can configure in the admin portal.  
 
 ### Contact:
 For any additional questions, reach out to developer.relations@symphony.com
