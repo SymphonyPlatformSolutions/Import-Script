@@ -29,6 +29,7 @@ def clean_messages(returned_messages, streamId):
         import_message.update(data = i.get("data"))
         import_message.update(intendedMessageTimestamp = i.get("timestamp"))
         import_message.update(intendedMessageFromUserId = i.get("user").get("userId"))
+        import_message.update(originalMessageId = i.get("messageId"))
         import_messages.append(import_message)
     return import_messages
 
